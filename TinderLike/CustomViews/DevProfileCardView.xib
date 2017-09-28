@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gotham Rounded Book.otf">
+            <string>GothamRounded-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DevProfileCardView" customModule="TinderLike" customModuleProvider="target">
+            <connections>
+                <outlet property="photoImageView" destination="ZTf-dw-6gV" id="3Q5-VU-j7v"/>
+                <outlet property="subTitleLabel" destination="tRi-k2-hpa" id="bh6-5j-7I7"/>
+                <outlet property="titleLabel" destination="JvI-wo-rbT" id="Gk1-bU-0q0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DevProfileCardView" customModule="TinderLike" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="406"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M" translatesAutoresizingMaskIntoConstraints="NO" id="ZTf-dw-6gV">
+                    <rect key="frame" x="0.0" y="0.0" width="352" height="406"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NI-yi-RYr">
+                    <rect key="frame" x="302" y="341" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="G37-Tf-2tb"/>
+                        <constraint firstAttribute="width" constant="30" id="btW-x4-axb"/>
+                    </constraints>
+                    <state key="normal" image="InfoButton"/>
+                    <connections>
+                        <action selector="onInfoButtonPressed:" destination="-1" eventType="touchUpInside" id="BoR-ab-tAa"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxn-zK-QIZ">
+                    <rect key="frame" x="20" y="327" width="266" height="58"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clara Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvI-wo-rbT">
+                            <rect key="frame" x="0.0" y="0.0" width="136" height="30.5"/>
+                            <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="26"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Python" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRi-k2-hpa">
+                            <rect key="frame" x="0.0" y="34.5" width="63" height="23.5"/>
+                            <fontDescription key="fontDescription" name="GothamRounded-Book" family="Gotham Rounded" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="tRi-k2-hpa" secondAttribute="bottom" id="AxH-s8-F8O"/>
+                        <constraint firstItem="JvI-wo-rbT" firstAttribute="top" secondItem="rxn-zK-QIZ" secondAttribute="top" id="Ksh-12-DjR"/>
+                        <constraint firstItem="JvI-wo-rbT" firstAttribute="leading" secondItem="rxn-zK-QIZ" secondAttribute="leading" id="btD-rC-YEC"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JvI-wo-rbT" secondAttribute="trailing" id="kXH-47-BeZ"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tRi-k2-hpa" secondAttribute="trailing" id="nJN-nU-wrZ"/>
+                        <constraint firstItem="tRi-k2-hpa" firstAttribute="top" secondItem="JvI-wo-rbT" secondAttribute="bottom" constant="4" id="pVC-n7-vB0"/>
+                        <constraint firstItem="tRi-k2-hpa" firstAttribute="leading" secondItem="rxn-zK-QIZ" secondAttribute="leading" id="xKG-ik-Gvg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2NI-yi-RYr" secondAttribute="trailing" constant="20" id="3Fh-VW-JCv"/>
+                <constraint firstItem="2NI-yi-RYr" firstAttribute="leading" secondItem="rxn-zK-QIZ" secondAttribute="trailing" constant="16" id="4SG-jl-D1d"/>
+                <constraint firstAttribute="bottom" secondItem="ZTf-dw-6gV" secondAttribute="bottom" id="5C3-3q-3Vs"/>
+                <constraint firstAttribute="bottom" secondItem="2NI-yi-RYr" secondAttribute="bottom" constant="35" id="FoQ-EQ-X13"/>
+                <constraint firstItem="rxn-zK-QIZ" firstAttribute="centerY" secondItem="2NI-yi-RYr" secondAttribute="centerY" id="Mg1-Xy-sIy"/>
+                <constraint firstItem="rxn-zK-QIZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="TSq-4N-kRO"/>
+                <constraint firstItem="ZTf-dw-6gV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YTQ-cM-hch"/>
+                <constraint firstAttribute="trailing" secondItem="ZTf-dw-6gV" secondAttribute="trailing" id="hnD-Ka-CFW"/>
+                <constraint firstItem="ZTf-dw-6gV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="j7r-N7-3Dw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="23" y="-77"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="InfoButton" width="30" height="30"/>
+        <image name="M" width="250" height="250"/>
+    </resources>
+</document>

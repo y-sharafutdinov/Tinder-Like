@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Developers Gallery View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DevelopersGalleryViewController" customModule="TestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDV-re-udk">
+                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPn-tf-N3M">
+                                        <rect key="frame" x="75" y="7" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="PFY-EM-dDD"/>
+                                            <constraint firstAttribute="height" constant="50" id="You-Se-iHs"/>
+                                        </constraints>
+                                        <state key="normal" image="CrossButton"/>
+                                        <connections>
+                                            <action selector="onCrossButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FpR-KC-ohy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AD-Pf-QSX">
+                                        <rect key="frame" x="250" y="7" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="FZG-Sd-T3Q"/>
+                                            <constraint firstAttribute="height" constant="50" id="lbW-b2-6VI"/>
+                                        </constraints>
+                                        <state key="normal" image="YesButton"/>
+                                        <connections>
+                                            <action selector="onOkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XbG-gl-7kk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wPn-tf-N3M" firstAttribute="centerX" secondItem="dDV-re-udk" secondAttribute="left" constant="100" id="4Ie-f7-2pp"/>
+                                    <constraint firstAttribute="height" constant="64" id="EEB-eR-QMy"/>
+                                    <constraint firstItem="8AD-Pf-QSX" firstAttribute="centerY" secondItem="dDV-re-udk" secondAttribute="centerY" id="OXX-cb-3VS"/>
+                                    <constraint firstItem="wPn-tf-N3M" firstAttribute="centerY" secondItem="dDV-re-udk" secondAttribute="centerY" id="Ol1-Mh-N9a"/>
+                                    <constraint firstAttribute="trailing" secondItem="8AD-Pf-QSX" secondAttribute="centerX" constant="100" id="z0p-jw-VRe"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bem-kr-7oC" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="8" y="64" width="359" height="539"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96536998056994816" green="0.96536998056994816" blue="0.96536998056994816" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dDV-re-udk" secondAttribute="trailing" id="2Wp-OV-Dwd"/>
+                            <constraint firstItem="Bem-kr-7oC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="A6H-81-jxa"/>
+                            <constraint firstItem="dDV-re-udk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bo2-6r-GXp"/>
+                            <constraint firstItem="dDV-re-udk" firstAttribute="top" secondItem="Bem-kr-7oC" secondAttribute="bottom" id="Kuc-Ej-dhB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dDV-re-udk" secondAttribute="bottom" id="Q0r-1v-eua"/>
+                            <constraint firstAttribute="trailing" secondItem="Bem-kr-7oC" secondAttribute="trailing" constant="8" id="cnE-Fk-iYG"/>
+                            <constraint firstItem="Bem-kr-7oC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="whx-dx-kdc"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="kolodaView" destination="Bem-kr-7oC" id="qTD-vS-teY"/>
+                        <outlet property="okButtonCenterX" destination="z0p-jw-VRe" id="Gx4-B1-1qp"/>
+                        <outlet property="skipButtonCenterX" destination="4Ie-f7-2pp" id="F2T-7W-RFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CrossButton" width="50" height="50"/>
+        <image name="YesButton" width="50" height="50"/>
+    </resources>
+</document>
